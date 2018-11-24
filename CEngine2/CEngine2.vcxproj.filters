@@ -25,6 +25,9 @@
     <Filter Include="Framework\platform\common">
       <UniqueIdentifier>{5aef5bd1-e3c3-4c96-8ea6-4247ff7a0039}</UniqueIdentifier>
     </Filter>
+    <Filter Include="assets">
+      <UniqueIdentifier>{f7e60ef0-b925-41ee-9e9d-fd33b3c5a1f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CEngine2.cpp">
@@ -56,6 +59,12 @@
     </ClCompile>
     <ClCompile Include="..\deps\ultralight\deps\Framework\platform\common\FontLoaderRoboto.cpp">
       <Filter>Framework\platform\common</Filter>
+    </ClCompile>
+    <ClCompile Include="UI.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CEUI.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -95,5 +104,40 @@
     <ClInclude Include="..\deps\ultralight\deps\Framework\platform\common\FontLoaderRoboto.h">
       <Filter>Framework\platform\common</Filter>
     </ClInclude>
+    <ClInclude Include="UI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CEUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\assets\about.html">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="..\assets\chrome-tabs.css">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="..\assets\chrome-tabs.js">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="..\assets\draggabilly.pkgd.min.js">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="..\assets\new_tab_page.html">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="..\assets\release_notes.html">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="..\assets\ui.css">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="..\assets\ui.html">
+      <Filter>assets</Filter>
+    </None>
+    <None Include="..\assets\ui.js">
+      <Filter>assets</Filter>
+    </None>
   </ItemGroup>
 </Project>
