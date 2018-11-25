@@ -1,7 +1,8 @@
 #include "CEUI.h"
+#include "Framework/Window.h"
 
-CEUI::CEUI(ultralight::Ref<ultralight::Renderer> renderer, ultralight::GPUDriverGL* driver, int width, int height):
-	Overlay(renderer, driver, width, height, 0, 0, 1.f)
+CEUI::CEUI(ultralight::Ref<ultralight::Renderer> renderer, ultralight::GPUDriver* driver, framework::Window& window):
+	Overlay(renderer, driver, window.width(), 79, 0, 0, window.scale())
 {
 	renderer_ = renderer;
 	driver_ = driver;
@@ -39,4 +40,9 @@ void CEUI::Update()
 		// Flip buffers here.
 		Draw();
 	}
+}
+
+void CEUI::drawTemp()
+{
+	Draw();
 }
