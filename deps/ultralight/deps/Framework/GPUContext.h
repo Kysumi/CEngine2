@@ -3,6 +3,7 @@
 #include "Window.h"
 #include <Ultralight/platform/GPUDriver.h>
 #include <Ultralight/platform/Config.h>
+#include <SFML/Graphics.hpp>
 
 namespace framework {
 
@@ -10,7 +11,7 @@ class GPUContext {
 public:
   virtual ~GPUContext() {}
 
-  static std::unique_ptr<GPUContext> Create(const Window& window, bool enable_vsync);
+  static std::unique_ptr<GPUContext> Create(const sf::Window& window, bool enable_vsync);
 
   virtual ultralight::GPUDriver* driver() const = 0;
 

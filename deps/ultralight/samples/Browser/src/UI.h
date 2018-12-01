@@ -5,6 +5,7 @@
 #include "Tab.h"
 #include <map>
 #include <memory>
+#include <SFML/Window/Window.hpp>
 
 using framework::JSObject;
 using framework::JSArgs;
@@ -16,7 +17,7 @@ using framework::JSFunction;
 class UI : public framework::Overlay,
            public ultralight::LoadListener {
 public:
-  UI(ultralight::Ref<ultralight::Renderer> renderer, ultralight::GPUDriver* driver, framework::Window& window);
+  UI(ultralight::Ref<ultralight::Renderer> renderer, ultralight::GPUDriver* driver, sf::Window& window);
   ~UI();
 
   // Inherited from ultralight::Listener::Load
@@ -55,7 +56,7 @@ protected:
 
   ultralight::Ref<ultralight::Renderer> renderer_;
   ultralight::GPUDriver* driver_;
-  framework::Window& window_;
+  sf::Window& window_;
   int screen_width_;
   int ui_height_;
   int tab_height_;

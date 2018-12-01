@@ -166,6 +166,7 @@
     <ClCompile Include="Browser.cpp" />
     <ClCompile Include="CEngine2.cpp" />
     <ClCompile Include="CEUI.cpp" />
+    <ClCompile Include="Tab.cc" />
     <ClCompile Include="UI.cc" />
   </ItemGroup>
   <ItemGroup>
@@ -179,9 +180,9 @@
     <ClInclude Include="..\deps\ultralight\deps\Framework\platform\glfw\gl\GPUDriverGL.h" />
     <ClInclude Include="..\deps\ultralight\deps\Framework\platform\glfw\PlatformGLFW.h" />
     <ClInclude Include="..\deps\ultralight\deps\Framework\Window.h" />
-    <ClInclude Include="..\deps\ultralight\deps\glfw\deps\glad\glad.h" />
     <ClInclude Include="Browser.h" />
     <ClInclude Include="CEUI.h" />
+    <ClInclude Include="Tab.h" />
     <ClInclude Include="UI.h" />
   </ItemGroup>
   <ItemGroup>

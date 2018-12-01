@@ -6,15 +6,15 @@ using namespace framework;
 
 #define UI_HEIGHT 79
 
-UI::UI(ultralight::Ref<ultralight::Renderer> renderer, ultralight::GPUDriver* driver, framework::Window& window) :
+UI::UI(ultralight::Ref<ultralight::Renderer> renderer, ultralight::GPUDriver* driver, sf::Window& window) :
   renderer_(renderer),
   driver_(driver),
   window_(window),
-  screen_width_(window.width()),
+  screen_width_(window.getSize().x),
   ui_height_(UI_HEIGHT),
-  tab_height_(window.height() - UI_HEIGHT),
-  scale_((float)window.scale()),
-  Overlay(renderer, driver, window.width(), UI_HEIGHT, 0, 0, (float)window.scale()) {
+  tab_height_(window.getSize().y - UI_HEIGHT),
+  scale_((float)1.f),
+  Overlay(renderer, driver, window.getSize().x, UI_HEIGHT, 0, 0, 1.f) {
   g_ui = this;
 
   view()->set_load_listener(this);
@@ -84,7 +84,7 @@ void UI::OnRequestTabClose(const JSObject& obj, const JSArgs& args) {
       return;
 
     if (tabs_.size() == 1)
-      window_.Close();
+      window_.close();
 
     if (id != active_tab_id_) {
       tabs_[id].reset();
@@ -173,9 +173,9 @@ void UI::FireScrollEvent(const ultralight::ScrollEvent& evt) {
 }
 
 void UI::Resize(int width, int height) {
-  screen_width_ = window_.width();
-  tab_height_ = window_.height() - UI_HEIGHT;
-  Overlay::Resize(window_.width(), UI_HEIGHT);
+  screen_width_ = window_.getSize().x;
+  tab_height_ = window_.getSize().y - UI_HEIGHT;
+  Overlay::Resize(window_.getSize().x, UI_HEIGHT);
   for (auto& tab : tabs_) {
     if (tab.second)
       tab.second->Resize(screen_width_, tab_height_);
@@ -225,5 +225,5 @@ void UI::SetURL(const ultralight::String& url) {
 }
 
 void UI::SetCursor(ultralight::Cursor cursor) {
-  window_.SetCursor(cursor);
+  //window_.SetCursor(cursor);
 }

@@ -51,19 +51,22 @@
     <ClCompile Include="..\deps\ultralight\deps\Framework\platform\glfw\gl\GPUDriverGL.cpp">
       <Filter>GL</Filter>
     </ClCompile>
-    <ClCompile Include="..\deps\ultralight\deps\glfw\deps\glad.c">
-      <Filter>GL</Filter>
-    </ClCompile>
     <ClCompile Include="..\deps\ultralight\deps\Framework\platform\common\FileSystemBasic.cpp">
       <Filter>Framework\platform\common</Filter>
     </ClCompile>
     <ClCompile Include="..\deps\ultralight\deps\Framework\platform\common\FontLoaderRoboto.cpp">
       <Filter>Framework\platform\common</Filter>
     </ClCompile>
+    <ClCompile Include="CEUI.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\deps\ultralight\deps\glfw\deps\glad.c">
+      <Filter>GL</Filter>
+    </ClCompile>
     <ClCompile Include="UI.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CEUI.cpp">
+    <ClCompile Include="Tab.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -95,19 +98,19 @@
     <ClInclude Include="..\deps\ultralight\deps\Framework\platform\glfw\gl\GPUDriverGL.h">
       <Filter>GL</Filter>
     </ClInclude>
-    <ClInclude Include="..\deps\ultralight\deps\glfw\deps\glad\glad.h">
-      <Filter>GL</Filter>
-    </ClInclude>
     <ClInclude Include="..\deps\ultralight\deps\Framework\platform\common\FileSystemBasic.h">
       <Filter>Framework\platform\common</Filter>
     </ClInclude>
     <ClInclude Include="..\deps\ultralight\deps\Framework\platform\common\FontLoaderRoboto.h">
       <Filter>Framework\platform\common</Filter>
     </ClInclude>
+    <ClInclude Include="CEUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="UI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CEUI.h">
+    <ClInclude Include="Tab.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
